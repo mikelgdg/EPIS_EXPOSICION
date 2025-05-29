@@ -24,6 +24,7 @@ app.add_middleware(
 )
 
 # Montar directorio de archivos estáticos
+os.makedirs("salidas", exist_ok=True)
 app.mount("/salidas", StaticFiles(directory=os.path.abspath("salidas")), name="salidas")
 
 data_informe = []
